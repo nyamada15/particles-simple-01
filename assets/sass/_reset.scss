@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	line-height: $base-line-height;
+}
+
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, main,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	vertical-align: baseline;
+	-webkit-text-size-adjust: 100%;
+}
+
+img { 
+	display: inherit;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+* {
+	box-sizing: border-box;
+	word-break: normal;
+	
+	line-height: 1.5;
+	background-repeat: no-repeat;
+}
+
+
+
+// 非対応ブラウザ
+div#ie_container {
+	display: none;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	
+	div.cover {
+		width: 100%;
+		height: 100%;
+		max-width: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		text-align: center;
+		margin: auto;
+		
+		p {
+			width: 100%; 
+			position: absolute;
+			font-size: 12px;
+			line-height: 1.5;
+			top: 50%;
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
+	}
+}
+
+.ie7 body { overflow: hidden; background: #FFFFFF; }
+.ie7 div#container { display: none; }
+
+.ie8 body { overflow: hidden; background: #FFFFFF; }
+.ie8 div#container { display: none; }
+.ie8 div#ie_container { display: inherit; }
